@@ -1,0 +1,11 @@
+<%= form_tag("/", method: "get") do %>
+  <%= label_tag(:user_id, "User Id:") %>
+  <%= text_field_tag(:user_id) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<% if @photo_urls.present? %>
+    <% @photo_urls.each do |photo| %>
+        <%= image_tag(photo) %>
+    <% end %>
+<% end %>
